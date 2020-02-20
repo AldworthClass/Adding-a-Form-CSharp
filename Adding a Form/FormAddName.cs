@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Adding_a_Form
 {
-    public partial class Form1 : Form
+    public partial class FormAddName : Form
     {
-        public Form1()
+        public FormAddName()
         {
             InitializeComponent();
+        }
+
+     
+
+        private void BtnDone_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
