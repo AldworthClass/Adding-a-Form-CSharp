@@ -23,5 +23,17 @@ namespace Adding_a_Form
         {
             this.Dispose();
         }
+
+        private void btnAddName_Click(object sender, EventArgs e)
+        {
+            FormMain.names.Add(txtAddName.Text.Trim());
+            lstNames.DataSource = null;
+            lstNames.DataSource = FormMain.names;
+        }
+
+        private void FormAddName_Load(object sender, EventArgs e)
+        {
+            lstNames.DataSource = FormMain.names;   //Fills ListBox with names
+        }
     }
 }

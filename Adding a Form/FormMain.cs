@@ -22,7 +22,22 @@ namespace Adding_a_Form
         {
             FormAddName frmAddName = new FormAddName();  
             frmAddName.ShowDialog();
-            
+            lstNames.DataSource = null;
+            lstNames.DataSource = names;
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            names.Add("Bear");
+            names.Add("Marigold");
+            names.Add("Humpty");
+            names.Add("Dumpty");
+            lstNames.DataSource = names;
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

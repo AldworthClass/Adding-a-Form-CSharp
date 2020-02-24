@@ -79,6 +79,7 @@
             this.btnQuit.TabIndex = 4;
             this.btnQuit.Text = "Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // FormMain
             // 
@@ -92,6 +93,7 @@
             this.Controls.Add(this.btnAddNames);
             this.Name = "FormMain";
             this.Text = "Main Form";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
 
         }

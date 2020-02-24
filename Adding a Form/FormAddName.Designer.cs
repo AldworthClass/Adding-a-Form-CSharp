@@ -68,6 +68,7 @@
             this.btnAddName.TabIndex = 3;
             this.btnAddName.Text = "Add";
             this.btnAddName.UseVisualStyleBackColor = true;
+            this.btnAddName.Click += new System.EventHandler(this.btnAddName_Click);
             // 
             // label1
             // 
@@ -90,6 +91,7 @@
             this.Controls.Add(this.btnDone);
             this.Name = "FormAddName";
             this.Text = "Add a Name";
+            this.Load += new System.EventHandler(this.FormAddName_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
