@@ -16,9 +16,6 @@ namespace Adding_a_Form
         {
             InitializeComponent();
         }
-
-     
-
         private void BtnDone_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -26,14 +23,22 @@ namespace Adding_a_Form
 
         private void btnAddName_Click(object sender, EventArgs e)
         {
-            FormMain.names.Add(txtAddName.Text.Trim());
-            lstNames.DataSource = null;
-            lstNames.DataSource = FormMain.names;
+            if (FormMain.names.Contains(txtAddName.Text.Trim()))
+                MessageBox.Show("Name already exists");
+            else
+            {
+                FormMain.names.Add(txtAddName.Text.Trim());
+                FormMain.names.Sort();
+                lstNames.DataSource = null;
+                lstNames.DataSource = FormMain.names;
+            }
+            
         }
 
         private void FormAddName_Load(object sender, EventArgs e)
         {
             lstNames.DataSource = FormMain.names;   //Fills ListBox with names
+            lstNames.SelectedIndex = -1;            //No items are selected initially
         }
     }
 }

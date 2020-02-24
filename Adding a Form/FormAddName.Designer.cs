@@ -40,7 +40,7 @@
             this.btnDone.Location = new System.Drawing.Point(236, 54);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(85, 23);
-            this.btnDone.TabIndex = 0;
+            this.btnDone.TabIndex = 2;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.BtnDone_Click);
@@ -52,20 +52,21 @@
             this.lstNames.Name = "lstNames";
             this.lstNames.Size = new System.Drawing.Size(137, 160);
             this.lstNames.TabIndex = 1;
+            this.lstNames.TabStop = false;
             // 
             // txtAddName
             // 
             this.txtAddName.Location = new System.Drawing.Point(155, 28);
             this.txtAddName.Name = "txtAddName";
             this.txtAddName.Size = new System.Drawing.Size(166, 20);
-            this.txtAddName.TabIndex = 2;
+            this.txtAddName.TabIndex = 0;
             // 
             // btnAddName
             // 
             this.btnAddName.Location = new System.Drawing.Point(155, 54);
             this.btnAddName.Name = "btnAddName";
             this.btnAddName.Size = new System.Drawing.Size(75, 23);
-            this.btnAddName.TabIndex = 3;
+            this.btnAddName.TabIndex = 1;
             this.btnAddName.Text = "Add";
             this.btnAddName.UseVisualStyleBackColor = true;
             this.btnAddName.Click += new System.EventHandler(this.btnAddName_Click);
@@ -83,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 186);
+            this.ClientSize = new System.Drawing.Size(324, 186);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddName);
             this.Controls.Add(this.txtAddName);

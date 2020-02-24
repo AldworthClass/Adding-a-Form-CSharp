@@ -13,6 +13,7 @@ namespace Adding_a_Form
     public partial class FormMain : Form
     {
         public static List<string> names = new List<string>();
+
         public FormMain()
         {
             InitializeComponent();
@@ -28,16 +29,24 @@ namespace Adding_a_Form
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            //Add some names to our list
             names.Add("Bear");
             names.Add("Marigold");
             names.Add("Humpty");
             names.Add("Dumpty");
-            lstNames.DataSource = names;
+            lstNames.DataSource = names;    //update the ListBos
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormMain_Shown(object sender, EventArgs e)
+        {
+            names.Sort();
+            lstNames.DataSource = null;
+            lstNames.DataSource = names;
         }
     }
 }
