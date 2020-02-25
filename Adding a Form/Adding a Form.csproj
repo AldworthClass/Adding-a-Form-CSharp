@@ -52,6 +52,12 @@
     <Compile Include="FormAddName.Designer.cs">
       <DependentUpon>FormAddName.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChangeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeName.Designer.cs">
+      <DependentUpon>FormChangeName.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddName.resx">
       <DependentUpon>FormAddName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeName.resx">
+      <DependentUpon>FormChangeName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

@@ -48,5 +48,27 @@ namespace Adding_a_Form
             lstNames.DataSource = null;
             lstNames.DataSource = names;
         }
+
+        private void btnEditName_Click(object sender, EventArgs e)
+        {
+            FormChangeName frmChangeName = new FormChangeName(lstNames.SelectedIndex);
+            frmChangeName.ShowDialog();
+            names.Sort();
+            lstNames.DataSource = null;
+            lstNames.DataSource = names;
+        }
+
+        private void btnRemoveNames_Click(object sender, EventArgs e)
+        {
+            if (lstNames.SelectedIndex >= 0)
+            {
+                names.RemoveAt(lstNames.SelectedIndex);
+                names.Sort();
+                lstNames.DataSource = null;
+                lstNames.DataSource = names;
+            }
+                
+            
+        }
     }
 }

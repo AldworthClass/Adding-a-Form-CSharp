@@ -53,6 +53,7 @@
             this.btnEditName.TabIndex = 1;
             this.btnEditName.Text = "Edit Name";
             this.btnEditName.UseVisualStyleBackColor = true;
+            this.btnEditName.Click += new System.EventHandler(this.btnEditName_Click);
             // 
             // lstNames
             // 
@@ -70,6 +71,7 @@
             this.btnRemoveNames.TabIndex = 3;
             this.btnRemoveNames.Text = "Remove Names";
             this.btnRemoveNames.UseVisualStyleBackColor = true;
+            this.btnRemoveNames.Click += new System.EventHandler(this.btnRemoveNames_Click);
             // 
             // btnQuit
             // 
