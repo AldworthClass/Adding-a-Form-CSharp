@@ -30,10 +30,10 @@ namespace Adding_a_Form
         private void FormMain_Load(object sender, EventArgs e)
         {
             //Add some names to our list
-            names.Add("Bear");
-            names.Add("Marigold");
-            names.Add("Humpty");
-            names.Add("Dumpty");
+            names.Add("Worf");
+            names.Add("Picard");
+            names.Add("Data");
+            names.Add("Troi");
             lstNames.DataSource = names;    //update the ListBos
         }
 
@@ -51,11 +51,16 @@ namespace Adding_a_Form
 
         private void btnEditName_Click(object sender, EventArgs e)
         {
-            FormChangeName frmChangeName = new FormChangeName(lstNames.SelectedIndex);
-            frmChangeName.ShowDialog();
-            names.Sort();
-            lstNames.DataSource = null;
-            lstNames.DataSource = names;
+            if (lstNames.SelectedIndex >= 0)
+            {
+                FormChangeName frmChangeName = new FormChangeName(lstNames.SelectedIndex);
+                frmChangeName.ShowDialog();
+                names.Sort();
+                lstNames.DataSource = null;
+                lstNames.DataSource = names;
+            }
+            else
+                MessageBox.Show("No name selected!");            
         }
 
         private void btnRemoveNames_Click(object sender, EventArgs e)
